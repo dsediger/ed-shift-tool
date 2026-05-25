@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:59472/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/conditions/</loc>
+    <loc>http://localhost:59472/conditions/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:59472/</loc>
   </url><url>
-    <loc>http://localhost:1313/evaluations/</loc>
+    <loc>http://localhost:59472/evaluations/</loc>
   </url><url>
-    <loc>http://localhost:1313/notes/</loc>
+    <loc>http://localhost:59472/notes/</loc>
   </url><url>
-    <loc>http://localhost:1313/references/</loc>
+    <loc>http://localhost:59472/references/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:59472/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/teaching/</loc>
+    <loc>http://localhost:59472/teaching/</loc>
   </url>
 </urlset>

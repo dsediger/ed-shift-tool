@@ -1,0 +1,6 @@
+[submodule "hugo-xmin"]
+	path = hugo-xmin
+	url = https://github.com/yihui/hugo-xmin
+[submodule "hugo-theme-stack"]
+	path = hugo-theme-stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack

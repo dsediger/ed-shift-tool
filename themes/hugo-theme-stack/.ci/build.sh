@@ -61,7 +61,7 @@ main() {
   # Build the site
   echo "Building the site..."
   cd demo
-  hugo --gc --minify --themesDir=/opt/buildhome --theme=repo
+  hugo --gc --minify
 }
 
 set -euo pipefail

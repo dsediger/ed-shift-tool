@@ -13,6 +13,8 @@ Welcome!
 - [Quick references](/references/)
 - [Teaching files](/teaching/)
 - [Evaluation notes](/evaluations/)
+- [ECG repository](/ecg)
+- [Dotphrase repository](/documentation)
 
 ## Quick start
 

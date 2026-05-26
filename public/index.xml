@@ -1,8 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>ED Shift Tool on </title>
-        <link>http://localhost:1313/</link>
-        <description>Recent content in ED Shift Tool on </description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ED Shift Tool on </title>
+    <link>http://localhost:50555/</link>
+    <description>Recent content in ED Shift Tool on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 May 2026 16:12:00 -0500</lastBuildDate><atom:link href="http://localhost:50555/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>http://localhost:50555/teaching/2026-05-25-test/</link>
+      <pubDate>Mon, 25 May 2026 16:12:00 -0500</pubDate>
+      <guid>http://localhost:50555/teaching/2026-05-25-test/</guid>
+      <description>&lt;h2 id=&#34;teaching-test&#34;&gt;teaching test&lt;/h2&gt;
+&lt;p&gt;this is a &lt;em&gt;test&lt;/em&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h2 id="teaching-test">teaching test</h2>
+<p>this is a <em>test</em></p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
 </rss>

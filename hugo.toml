@@ -1,4 +1,4 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
 title = ''
-theme = 'papermodx'
+theme = 'hugo-PaperModX'

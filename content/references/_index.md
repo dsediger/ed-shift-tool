@@ -7,6 +7,5 @@ This section holds fast-access reference pages and external tools you use on shi
 
 - [EMRAP Corependium](https://www.emrap.org/corependium/)
 - [MDCalc](https://mdcalc.com)
-- Protocol summaries
-- Shortcut links for scoring systems and calculators
-- Test 3
+- [UpToDate](https://uptodate.com)
+- [WikEM](http://wikem.org)

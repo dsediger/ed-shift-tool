@@ -9,3 +9,4 @@ This section holds fast-access reference pages and external tools you use on shi
 - [MDCalc](https://mdcalc.com)
 - Protocol summaries
 - Shortcut links for scoring systems and calculators
+- Test 3

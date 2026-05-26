@@ -1,10 +1,11 @@
-+++
-title = "Airway Management"
-date = '2026-05-25'
-draft = true
-categories = ["teaching"]
-summary = "High-yield airway teaching points and emergency airway checklist."
-+++
+---
+title: Airway Management
+date: 2026-05-25
+draft: false
+categories:
+  - teaching
+summary: High-yield airway teaching points and emergency airway checklist.
+---
 
 ### Airway checklist
 - Prepare airway equipment

@@ -1,4 +1,4 @@
-baseURL = 'https://www.ediger.md/'
+baseURL = 'https://ediger.md/'
 locale = 'en-us'
 title = 'David Ediger, MD'
 theme = 'hugo-PaperModX'

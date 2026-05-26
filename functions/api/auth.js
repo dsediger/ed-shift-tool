@@ -8,14 +8,24 @@ function renderBody(status, content) {
   </head>
   <body>
     <script>
-      const message = 'authorization:github:${status}:${JSON.stringify(content)}';
+      (function() {
+        const message = 'authorization:github:${status}:${JSON.stringify(content)}';
 
-      if (window.opener) {
-        window.opener.postMessage(message, "*");
-        window.close();
-      } else {
-        document.body.innerText = "Authentication complete. You can close this window.";
-      }
+        function receiveMessage(event) {
+          if (event.data === "authorizing:github") {
+            window.opener.postMessage(message, event.origin);
+            window.close();
+          }
+        }
+
+        window.addEventListener("message", receiveMessage, false);
+
+        if (window.opener) {
+          window.opener.postMessage("authorizing:github", "*");
+        } else {
+          document.body.innerText = "Authentication complete. You can close this window.";
+        }
+      })();
     </script>
     <p>Completing authentication...</p>
   </body>

@@ -6,15 +6,13 @@ description = "A practical emergency medicine reference and shift documentation 
 
 # ED Shift Tool
 
-Welcome to your on-shift reference hub. Use the sections below to reach quick links, condition summaries, teaching content, and resident evaluation notes.
+Welcome! 
 
 ## Dashboard
 
-- [References](/references/)
-- [Conditions](/conditions/)
-- [Notes](/notes/)
-- [Teaching](/teaching/)
-- [Evaluations](/evaluations/)
+- [Quick references](/references/)
+- [Teaching files](/teaching/)
+- [Evaluation notes](/evaluations/)
 
 ## Quick start
 

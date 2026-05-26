@@ -8,37 +8,25 @@ function renderBody(status, content) {
   </head>
   <body>
     <script>
-      (function() {
-        function receiveMessage(message) {
-          window.opener.postMessage(
-            'authorization:github:${status}:${JSON.stringify(content)}',
-            message.origin
-          );
-          window.removeEventListener("message", receiveMessage, false);
-          window.close();
-        }
+      const message = 'authorization:github:${status}:${JSON.stringify(content)}';
 
-        window.addEventListener("message", receiveMessage, false);
-
-        window.opener.postMessage("authorizing:github", "*");
-      })();
+      if (window.opener) {
+        window.opener.postMessage(message, "*");
+        window.close();
+      } else {
+        document.body.innerText = "Authentication complete. You can close this window.";
+      }
     </script>
-
     <p>Completing authentication...</p>
   </body>
-</html>
-`;
+</html>`;
 }
 
 export async function onRequest(context) {
   const { request, env } = context;
-
   const url = new URL(request.url);
-
   const code = url.searchParams.get("code");
 
-  // STEP 1:
-  // Redirect user to GitHub OAuth if no code yet
   if (!code) {
     const redirectUri = `${url.origin}/api/auth`;
 
@@ -51,44 +39,33 @@ export async function onRequest(context) {
     return Response.redirect(githubAuthUrl, 302);
   }
 
-  // STEP 2:
-  // Exchange temporary code for GitHub access token
   try {
-    const tokenResponse = await fetch(
-      "https://github.com/login/oauth/access_token",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-          "User-Agent": "decap-cms-cloudflare-pages",
-        },
-        body: JSON.stringify({
-          client_id: env.GITHUB_CLIENT_ID,
-          client_secret: env.GITHUB_CLIENT_SECRET,
-          code,
-        }),
-      }
-    );
+    const tokenResponse = await fetch("https://github.com/login/oauth/access_token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "decap-cms-cloudflare-pages",
+      },
+      body: JSON.stringify({
+        client_id: env.GITHUB_CLIENT_ID,
+        client_secret: env.GITHUB_CLIENT_SECRET,
+        code,
+      }),
+    });
 
     const result = await tokenResponse.json();
 
-    // Handle GitHub OAuth errors
     if (result.error) {
       return new Response(renderBody("error", result), {
         status: 401,
-        headers: {
-          "Content-Type": "text/html",
-        },
+        headers: { "Content-Type": "text/html" },
       });
     }
 
-    // Success
     return new Response(renderBody("success", result), {
       status: 200,
-      headers: {
-        "Content-Type": "text/html",
-      },
+      headers: { "Content-Type": "text/html" },
     });
   } catch (error) {
     return new Response(
@@ -98,9 +75,7 @@ export async function onRequest(context) {
       }),
       {
         status: 500,
-        headers: {
-          "Content-Type": "text/html",
-        },
+        headers: { "Content-Type": "text/html" },
       }
     );
   }

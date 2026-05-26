@@ -15,6 +15,7 @@ Welcome!
 - [Evaluation notes](/evaluations/)
 - [ECG repository](/ecg)
 - [Dotphrase repository](/documentation)
+- [CMS backend](/admin)
 
 ## Quick start
 

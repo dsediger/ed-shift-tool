@@ -4,7 +4,7 @@ backend:
   branch: main
   base_url: https://ediger.md
   auth_endpoint: /api/auth
-  auth_scope: repo
+  auth_scope: public_repo
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"

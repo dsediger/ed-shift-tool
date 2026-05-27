@@ -3,3 +3,4 @@ locale = 'en-us'
 title = 'David Ediger, MD'
 theme = 'hugo-PaperModX'
 disableKinds = ["RSS"]
+

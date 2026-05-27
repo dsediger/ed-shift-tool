@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dsediger/ed-shift-tool
   branch: main
-  base_url: http://ediger.md
+  base_url: https://ediger.md
   auth_endpoint: /api/auth
   auth_scope: repo
 

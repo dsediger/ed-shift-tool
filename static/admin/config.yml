@@ -1,47 +1,36 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
 backend:
   name: github
   repo: dsediger/ed-shift-tool
-  branch: main
-  base_url: https://ediger.md
-  auth_endpoint: /api/auth
-  auth_scope: public_repo
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: /public/media
+public_folder: /media
 
 collections:
-  - name: "teaching"
-    label: "Teaching"
-    folder: "content/teaching"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  - name: teaching
+    label: Teaching notes
+    label_singular: Teaching
+    folder: /content/teaching
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, type: date }
+      - { label: Body, name: body, widget: richtext }
 
-  - name: "ecgs"
-    label: "ECGs"
-    folder: "content/ecg"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  - name: ecg
+    label: ECGs
+    label_singular: ECGs
+    folder: /content/ecg
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "documentation"
-    label: "Documentation"
-    folder: "content/documentation"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, type: date }
+      - { label: Body, name: body, widget: richtext }
+  
+  - name: documentation
+    label: Documentation
+    label_singular: Documentation
+    folder: /content/documentation
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, type: date }
+      - { label: Body, name: body, widget: richtext }

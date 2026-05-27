@@ -2,9 +2,6 @@ backend:
   name: github
   repo: dsediger/ed-shift-tool
   branch: main
-  base_url: https://ediger.md
-  auth_endpoint: /api/auth
-  auth_scope: repo
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"

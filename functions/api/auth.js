@@ -44,7 +44,7 @@ export async function onRequest(context) {
       `https://github.com/login/oauth/authorize` +
       `?client_id=${env.GITHUB_CLIENT_ID}` +
       `&redirect_uri=${encodeURIComponent(redirectUri)}` +
-      `&scope=${encodeURIComponent("repo")}`;
+      `&scope=${encodeURIComponent("public_repo")}`;
 
     return Response.redirect(githubAuthUrl, 302);
   }
